@@ -1,0 +1,41 @@
+apiVersion: v1
+entries:
+  etherpad:
+  - apiVersion: v1
+    appVersion: 1.8.4
+    created: "2020-06-01T16:29:35.762906-05:00"
+    description: A Helm chart for Kubernetes
+    digest: 18cad5547d8db6a612bdd03c24b728e1bd1571c07f84c017db0d90c12ca93798
+    name: etherpad
+    urls:
+    - https://focused-labs.github.io/etherpad-helm/etherpad-0.1.0.tgz
+    version: 0.1.0
+  mariadb:
+  - apiVersion: v1
+    appVersion: 10.3.23
+    created: "2020-06-01T16:29:35.765132-05:00"
+    description: Fast, reliable, scalable, and easy to use open-source relational
+      database system. MariaDB Server is intended for mission-critical, heavy-load
+      production systems as well as for embedding into mass-deployed software. Highly
+      available MariaDB cluster.
+    digest: d59ee7ba1b47734d85bea48f2a61ec647122dc2cdb314e34be6a07b326debf0a
+    engine: gotpl
+    home: https://mariadb.org
+    icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+    keywords:
+    - mariadb
+    - mysql
+    - database
+    - sql
+    - prometheus
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: mariadb
+    sources:
+    - https://github.com/bitnami/bitnami-docker-mariadb
+    - https://github.com/prometheus/mysqld_exporter
+    urls:
+    - https://focused-labs.github.io/etherpad-helm/charts/mariadb-7.4.2.tgz
+    version: 7.4.2
+generated: "2020-06-01T16:29:35.760634-05:00"

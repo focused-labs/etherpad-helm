@@ -13,6 +13,22 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
+#
+# MariaDB chart configuration
+#
+# https://github.com/bitnami/charts/blob/master/bitnami/mariadb/values.yaml
+#
+mariadb:
+  replication:
+    enabled: false
+  db:
+    name: etherpad
+    user: etherpad
+    # password: <--- this is required, set it as configuration to the chart
+    #   helm install --set mariadb.db.password=dontusethispassword
+    # To enable helm upgrade, need to specify a password
+    forcePassword: true
+
 serviceAccount:
   # Specifies whether a service account should be created
   create: true

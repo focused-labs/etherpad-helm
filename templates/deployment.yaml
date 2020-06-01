@@ -25,6 +25,21 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
+          env:
+            - name: DB_TYPE
+              value: mysql
+            - name: DB_HOST
+              value: {{ template "etherpad.mariadb.fullname" . }}
+            - name: DB_PORT
+              value: "3306"
+            - name: DB_NAME
+              value: {{ .Values.mariadb.db.name | quote }}
+            - name: DB_USER
+              value: {{ .Values.mariadb.db.user | quote }}
+            - name: DB_PASS
+              value: {{ .Values.mariadb.db.password | quote }}
+            - name: DB_CHARSET
+              value: "UTF8"
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"

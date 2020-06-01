@@ -27,19 +27,19 @@ spec:
         - name: {{ .Chart.Name }}
           env:
             - name: DB_TYPE
-              value: mysql
+              value: postgres
             - name: DB_HOST
-              value: {{ template "etherpad.mariadb.fullname" . }}
+              value: {{ template "etherpad.postgres.fullname" . }}
             - name: DB_PORT
-              value: "3306"
+              value: "5432"
             - name: DB_NAME
-              value: {{ .Values.mariadb.db.name | quote }}
+              value: "etherpad"
             - name: DB_USER
-              value: {{ .Values.mariadb.db.user | quote }}
+              value: {{ .Values.postgres.postgresqlUsername | quote }}
             - name: DB_PASS
-              value: {{ .Values.mariadb.db.password | quote }}
-            - name: DB_CHARSET
-              value: "UTF8"
+              value: {{ .Values.postgres.postgresqlPassword | quote }}
+            - name: charset
+              value: "utf8mb4"
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"

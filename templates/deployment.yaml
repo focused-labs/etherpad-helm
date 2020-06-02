@@ -27,19 +27,17 @@ spec:
         - name: {{ .Chart.Name }}
           env:
             - name: DB_TYPE
-              value: postgres
+              value: postgrespool
             - name: DB_HOST
               value: {{ template "etherpad.postgres.fullname" . }}
             - name: DB_PORT
               value: "5432"
             - name: DB_NAME
-              value: "etherpad"
+              value: {{ .Values.postgres.postgresqlDatabase | quote }}
             - name: DB_USER
               value: {{ .Values.postgres.postgresqlUsername | quote }}
             - name: DB_PASS
               value: {{ .Values.postgres.postgresqlPassword | quote }}
-            - name: charset
-              value: "utf8mb4"
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"

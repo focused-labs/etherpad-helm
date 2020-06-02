@@ -19,12 +19,11 @@ fullnameOverride: ""
 # https://github.com/bitnami/charts/blob/master/bitnami/postgresql/values.yaml
 #
 postgres:
-  replication:
-    enabled: false
   postgresqlUsername: etherpad
-    # postgresqlPassword: <--- this is required, set it as configuration to the chart
-    #   helm install --set postgress.postgresqlPassword=dontusethispassword
-    # To enable helm upgrade, need to specify a password
+  postgresqlDatabase: etherpad
+  # postgresqlPassword: <--- this is required, set it as configuration to the chart
+  #   helm install --set postgress.postgresqlPassword=dontusethispassword
+  # To enable helm upgrade, need to specify a password
 
 
 serviceAccount:

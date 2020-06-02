@@ -14,20 +14,15 @@ nameOverride: ""
 fullnameOverride: ""
 
 #
-# MariaDB chart configuration
+# Postgres chart configuration
 #
-# https://github.com/bitnami/charts/blob/master/bitnami/mariadb/values.yaml
+# https://github.com/bitnami/charts/blob/master/bitnami/postgresql/values.yaml
 #
-mariadb:
-  replication:
-    enabled: false
-  db:
-    name: etherpad
-    user: etherpad
-    # password: <--- this is required, set it as configuration to the chart
-    #   helm install --set mariadb.db.password=dontusethispassword
-    # To enable helm upgrade, need to specify a password
-    forcePassword: true
+postgresql:
+  postgresqlDatabase: etherpad
+  # To enable helm upgrade, need to specify a password
+  # postgresqlPassword: <--- this is required, set it as configuration to the chart
+  #   helm install --set postgresql.postgresqlPassword=dontusethispassword
 
 serviceAccount:
   # Specifies whether a service account should be created

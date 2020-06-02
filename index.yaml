@@ -3,39 +3,48 @@ entries:
   etherpad:
   - apiVersion: v1
     appVersion: 1.8.4
-    created: "2020-06-01T16:29:35.762906-05:00"
+    created: "2020-06-02T11:40:23.845194-05:00"
+    description: A Helm chart for Kubernetes
+    digest: 99809e2afd5595e841e5800755f8f888e148170a8de5b42fbe9947aac9e468dd
+    name: etherpad
+    urls:
+    - https://focused-labs.github.io/etherpad-helm/etherpad-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v1
+    appVersion: 1.8.4
+    created: "2020-06-02T11:40:23.839464-05:00"
     description: A Helm chart for Kubernetes
     digest: 18cad5547d8db6a612bdd03c24b728e1bd1571c07f84c017db0d90c12ca93798
     name: etherpad
     urls:
     - https://focused-labs.github.io/etherpad-helm/etherpad-0.1.0.tgz
     version: 0.1.0
-  mariadb:
+  postgresql:
   - apiVersion: v1
-    appVersion: 10.3.23
-    created: "2020-06-01T16:29:35.765132-05:00"
-    description: Fast, reliable, scalable, and easy to use open-source relational
-      database system. MariaDB Server is intended for mission-critical, heavy-load
-      production systems as well as for embedding into mass-deployed software. Highly
-      available MariaDB cluster.
-    digest: d59ee7ba1b47734d85bea48f2a61ec647122dc2cdb314e34be6a07b326debf0a
+    appVersion: 11.8.0
+    created: "2020-06-02T11:40:23.847419-05:00"
+    description: Chart for PostgreSQL, an object-relational database management system
+      (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+    digest: 7a7952fd2a07bea83361dbd8fcc77f0de9d2253a39e58195ae109b2e8983b436
     engine: gotpl
-    home: https://mariadb.org
-    icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+    home: https://www.postgresql.org/
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
     keywords:
-    - mariadb
-    - mysql
+    - postgresql
+    - postgres
     - database
     - sql
-    - prometheus
+    - replication
+    - cluster
     maintainers:
     - email: containers@bitnami.com
       name: Bitnami
-    name: mariadb
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: postgresql
     sources:
-    - https://github.com/bitnami/bitnami-docker-mariadb
-    - https://github.com/prometheus/mysqld_exporter
+    - https://github.com/bitnami/bitnami-docker-postgresql
     urls:
-    - https://focused-labs.github.io/etherpad-helm/charts/mariadb-7.4.2.tgz
-    version: 7.4.2
-generated: "2020-06-01T16:29:35.760634-05:00"
+    - https://focused-labs.github.io/etherpad-helm/charts/postgresql-8.10.4.tgz
+    version: 8.10.4
+generated: "2020-06-02T11:40:23.835332-05:00"

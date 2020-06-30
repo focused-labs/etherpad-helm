@@ -28,6 +28,22 @@ entries:
   etherpad:
   - apiVersion: v1
     appVersion: 1.8.4
+    created: "2020-06-30T22:42:43.721374796Z"
+    dependencies:
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 8.x.x
+    description: Deploy Etherpad
+    digest: 6187aff9782d785ef862510363bf4e07f0c1e446898571af6992d4e762a53cac
+    maintainers:
+    - email: dev@focusedlabs.io
+      name: Focused Labs
+    name: etherpad
+    urls:
+    - https://github.com/focused-labs/charts/releases/download/etherpad-0.2.2/etherpad-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v1
+    appVersion: 1.8.4
     created: "2020-06-30T20:59:32.563554248Z"
     dependencies:
     - name: postgresql

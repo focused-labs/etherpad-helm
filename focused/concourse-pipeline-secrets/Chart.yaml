@@ -1,4 +1,4 @@
-name: Concourse Namespace for the Team
+name: concourse-pipeline-secrets
 version: v0.1
 description: Concourse Namespace for the team
 appVersion: v0.1

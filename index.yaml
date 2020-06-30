@@ -1,5 +1,18 @@
 apiVersion: v1
 entries:
+  concourse-pipeline-secrets:
+  - apiVersion: v1
+    appVersion: v0.1
+    created: "2020-06-30T20:51:01.252025081Z"
+    description: Concourse Namespace for the team
+    digest: 712ab1a4a37c6f4baf84048241dd84d4f25ed7329cb7f5de6133bfe9ec7a36a2
+    maintainers:
+    - email: dev@focusedlabs.io
+      name: Focused Labs
+    name: concourse-pipeline-secrets
+    urls:
+    - https://github.com/focused-labs/charts/releases/download/concourse-pipeline-secrets-v0.1/concourse-pipeline-secrets-v0.1.tgz
+    version: v0.1
   etherpad:
   - apiVersion: v1
     appVersion: 1.8.4

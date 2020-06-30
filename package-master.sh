@@ -5,4 +5,4 @@ set -xe
 helm lint focused/*
 helm dependency update focused/*
 helm package focused/*
-helm repo index focused/* --url https://focused-labs.github.io/charts
+helm repo index focused --url https://focused-labs.github.io/charts

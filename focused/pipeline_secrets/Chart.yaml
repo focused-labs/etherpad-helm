@@ -1,0 +1,7 @@
+name: Concourse Namespace for the Team
+version: v0.1
+description: Concourse Namespace for the team
+appVersion: v0.1
+maintainers:
+  - name: Focused Labs
+    email: dev@focusedlabs.io

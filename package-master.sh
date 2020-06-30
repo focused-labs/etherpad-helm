@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
-git merge master
-helm package .
-helm repo index . --url https://focused-labs.github.io/etherpad-helm/
+set -xe
+# git merge master
+helm lint focused/*
+helm dependency update focused/*
+helm package focused/*
+helm repo index focused/* --url https://focused-labs.github.io/charts

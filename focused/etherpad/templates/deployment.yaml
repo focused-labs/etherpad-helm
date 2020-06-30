@@ -37,7 +37,10 @@ spec:
             - name: DB_USER
               value: {{ .Values.postgresql.postgresqlUsername | quote }}
             - name: DB_PASS
-              value: {{ .Values.postgresql.postgresqlPassword | quote }}
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "etherpad.postgresql.fullname" . }}
+                  key: postgresql-password
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
